@@ -17,7 +17,7 @@ def monitor_gpu():
             utilization = pynvml.nvmlDeviceGetUtilizationRates(handle)
 
             timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-            logger.info(f"{timestamp} - GPU {i}: Memory Used: {mem_info.used / 1024**2:.2f} MB Memory Total: {mem_info.total / 1024**2:.2f} MB GPU Utilization: {utilization.gpu}% Memory Utilization: {utilization.memory}% -------------------------------", end="\r")
+            logger.info(f"{timestamp} - GPU {i}: Memory Used: {mem_info.used / 1024**2:.2f} MB Memory Total: {mem_info.total / 1024**2:.2f} MB GPU Utilization: {utilization.gpu}% Memory Utilization: {utilization.memory}% -------------------------------")
 
         time.sleep(2)
 
